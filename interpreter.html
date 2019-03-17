@@ -90,9 +90,11 @@
     function YASL_twosum() {
         document.getElementById('output').value = '';
         document.getElementById('input').value = 
-            '/* The challenge is to find all the pairs of two integers in an unsorted array \n' +
+            '/* The challenge is to find all the pairs of two \n' +
+            ' * integers in an unsorted array \n' +
             ' * `ls` that sum up to a given number `t`.\n' +
-            ' * This can be done in linear time in the length of `ls`, as shown below.\n' +
+            ' * This can be done in linear time in the length \n' +
+            ' * of `ls`, as shown below.\n' +
             ' */\n\n' +
             'const fn twosum(const ls, const target) {\n' +
             '\tconst mapped_values := { target - val : val for  val <- ls }\n' +
