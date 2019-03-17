@@ -14,13 +14,13 @@ div {
 button {
     background-color: #28001c;
     color: #f28c18;
-    border-style: none;
+    border: 0.1em solid #28001c;
 }
 
 textarea {
     background-color: #28001c;  
     color: #f28c18;
-    border-style: none;
+    border: 0.1em solid #28001c;
 }
 
 code {
