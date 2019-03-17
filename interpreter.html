@@ -12,6 +12,7 @@
     <p> Enter your YASL program or choose one of the demo programs below. </p>
     <div>
         <button onclick="YASL_helloworld();" type="button">hello world</button>
+        <button onclick="YASL_fact();" type="button">factorial</button>
         <button onclick="YASL_twosum();" type="button">two sum</button>
     </div>
     <div class="emscripten" id="status">Downloading...</div>
@@ -86,6 +87,28 @@
     function YASL_helloworld() {
         document.getElementById('output').value = '';
         document.getElementById('input').value = '# The first program in any language\n\necho \'hello world!\'\n';
+    }
+    function YASL_fact() {
+        document.getElementById('output').value = '';
+        document.getElementById('input').value = 
+            'fn range(a, b) {\n' + 
+            '\ttmp := []\n' +
+            '\tfor i := a; i < b; i += 1 {\n' +
+            '\t\ttmp->push(i)\n' +
+            '\t}\n\n' +
+            '\treturn tmp\n' +
+            '}\n\n' +
+            'fn fact(n) {\n' +
+            '\ttmp := 1\n' +
+            '\twhile n > 0 {\n' +
+            '\t\ttmp *= n\n' +
+            '\t\tn -= 1\n' +
+            '\t}\n\n' +
+            '\treturn tmp\n' +
+            '}\n\n\n' +
+            'for i <- range(0, 7) {\n' +
+            '\techo "fact(#{i}): #{fact(i)}"\n' +
+            '}\n'
     }
     function YASL_twosum() {
         document.getElementById('output').value = '';
