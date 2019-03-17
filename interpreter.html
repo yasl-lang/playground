@@ -84,7 +84,25 @@
     }
     function YASL_helloworld() {
         document.getElementById('output').value = '';
-        document.getElementById('input').value = '# The first program in any language\necho \'hello world!\'\n';
+        document.getElementById('input').value = '# The first program in any language\n\necho \'hello world!\'\n';
+    }
+    function YASL_twosum() {
+        document.getElementById('output').value = '';
+        document.getElementById('input').value = 
+            '/* The challenge is to find all the pairs of two integers in an unsorted array \n' +
+            ' * `ls` that sum up to a given number `t`.\n' +
+            ' * This can be done in linear time in the length of `ls`, as shown below.\n' +
+            ' */\n\n' +
+            'const fn twosum(const ls, const target) {\n' +
+            '\tconst mapped_values := { target - val : val for  val <- ls }\n' +
+            '\tfor val <- ls {\n' +
+            '\t\tif mapped_values[val] !== undef {\n' +
+            '\t\t\treturn "#{mapped_values[val]} + #{val} == #{target}"\n' +
+            '\t\t}\n' +
+            '\t}\n' +
+            'return \'not found\'\n' +
+            '}\n\n' +
+            'twosum([1, 2, 13, 4, 5], 17)\n';
     }
 </script>
 <script async type="text/javascript" src="YASL.js"></script>
