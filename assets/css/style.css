@@ -7,11 +7,21 @@ body {
 }
 
 div {
-    max-width: 800px;
     padding-top: 1em;
     padding-left: 1.5em;
 }
 
+button {
+    background-color: #670b06;
+    color: #f28c18;
+    border: 2px solid #f28c18;
+}
+
+textarea {
+    background-color: #670b06;  
+    color: #f28c18;
+    border: 2px solid #f28c18;
+}
 
 code {
     background-color: #140f2e;
@@ -42,5 +52,5 @@ th, td {
 }
 
 table, th, td {
-    border: 0.1em solid white;
+    border: 0.1em solid #f28c18;
 } 
