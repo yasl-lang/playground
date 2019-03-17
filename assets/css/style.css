@@ -14,13 +14,13 @@ div {
 button {
     background-color: #28001c;
     color: #f28c18;
-    border: 0.5em solid #28001c;
+    border: 0.25em solid #28001c;
 }
 
 textarea {
     background-color: #28001c;  
     color: #f28c18;
-    border: 0.15em solid #28001c;
+    border: 0.25em solid #28001c;
 }
 
 code {
@@ -53,5 +53,5 @@ th, td {
 }
 
 table, th, td {
-    border: 0.5em solid #28001c;
+    border: 0.25em solid #28001c;
 } 
