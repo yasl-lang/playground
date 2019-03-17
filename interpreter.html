@@ -97,13 +97,13 @@
             ' * of `ls`, as shown below.\n' +
             ' */\n\n' +
             'const fn twosum(const ls, const target) {\n' +
-            '\tconst mapped_values := { target - val : val for  val <- ls }\n' +
+            '\tconst mapped_values := \n\t{ target - val : val for  val <- ls }\n' +
             '\tfor val <- ls {\n' +
             '\t\tif mapped_values[val] !== undef {\n' +
             '\t\t\treturn "#{mapped_values[val]} + #{val} == #{target}"\n' +
             '\t\t}\n' +
             '\t}\n' +
-            'return \'not found\'\n' +
+            '\treturn \'not found\'\n' +
             '}\n\n' +
             'twosum([1, 2, 13, 4, 5], 17)\n';
     }
