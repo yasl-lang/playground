@@ -12,6 +12,7 @@ div {
 }
 
 button {
+    font-family: 'Ubuntu Mono', monospace;
     background-color: #4f4e51;
     color: #f28c18;
     border: 0.25em solid #4f4e51;
@@ -29,6 +30,7 @@ button:hover {
 }
 
 textarea {
+    font-family: 'Ubuntu Mono', monospace;
     background-color: #4f4e51;  
     color: #f28c18;
     border-radius: 2px;
