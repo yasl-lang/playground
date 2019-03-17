@@ -82,6 +82,10 @@
         console.log(text);
         Module.callMain(["-c", text]);
     }
+    function YASL_helloworld() {
+        document.getElementById('output').value = '';
+        document.getElementById('input').value = '# The first program in any language\necho \'hello world!\'\n';
+    }
 </script>
 <script async type="text/javascript" src="YASL.js"></script>
 <script>
