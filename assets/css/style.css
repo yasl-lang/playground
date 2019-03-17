@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+body {
+    font-family: 'Ubuntu Mono', monospace;
+    background-color: #670b06;
+    color: #f28c18;
+}
+
+div {
+    max-width: 800px;
+    padding-top: 1em;
+    padding-left: 1.5em;
+}
+
+
+code {
+    background-color: #140f2e;
+}
+
+ul {
+    list-style-type: square;
+}
+
+a:link {
+    color: purple;
+}
+
+a:visited {
+    color: hotpink;
+}
+
+a:active {
+    color: red;
+}
+table {
+    border-collapse: collapse;   
+}
+
+th, td {
+    text-align: left;
+    padding: 0.7em;
+}
+
+table, th, td {
+    border: 0.1em solid white;
+} 
