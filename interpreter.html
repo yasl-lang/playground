@@ -106,14 +106,14 @@
         document.getElementById('input').value = 
             '# simple program that iteratively calculates factorials\n\n' +
             'fn range(a, b) {\n' + 
-            '\ttmp := []\n' +
-            '\tfor i := a; i < b; i += 1 {\n' +
+            '\tlet tmp = []\n' +
+            '\tfor let i = a; i < b; i += 1 {\n' +
             '\t\ttmp->push(i)\n' +
             '\t}\n\n' +
             '\treturn tmp\n' +
             '}\n\n' +
             'fn fact(n) {\n' +
-            '\ttmp := 1\n' +
+            '\tlet tmp = 1\n' +
             '\twhile n > 0 {\n' +
             '\t\ttmp *= n\n' +
             '\t\tn -= 1\n' +
@@ -134,7 +134,7 @@
             ' * of `ls`, as shown below.\n' +
             ' */\n\n' +
             'const fn twosum(const ls, const target) {\n' +
-            '\tconst mapped_values := { target - val : val for  val <- ls }\n' +
+            '\tconst mapped_values = { target - val : val for  val <- ls }\n' +
             '\tfor val <- ls {\n' +
             '\t\tif mapped_values[val] !== undef {\n' +
             '\t\t\treturn "#{mapped_values[val]} + #{val} == #{target}"\n' +
