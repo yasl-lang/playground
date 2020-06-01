@@ -85,7 +85,17 @@
         document.getElementById('output').value = '';
         var text = document.getElementById('input').value;
         console.log(text);
-        Module.callMain(["-E", text]);
+        var S = Module.ccall("YASL_newstate_bb", "number", ["string", "number"], [text, text.length]);
+        Module.ccall("YASL_setprintout_tostr", null, ["number"], [S]);
+        Module.ccall("YASL_setprinterr_tostr", null, ["number"], [S]);
+        var status = Module.ccall("YASL_execute", "number", ["number"], [S]);
+        if (status) {
+            Module.ccall("YASL_loadprinterr", null, ["number"], [S])
+        } else {
+            Module.ccall("YASL_loadprintout", null, ["number"], [S])
+        }
+        var output = Module.ccall("YASL_top_popcstring", 'string', ["number"], [S]);
+        document.getElementById('output').value = output;
     }
     function YASL_helloworld() {
         document.getElementById('output').value = '';
@@ -135,7 +145,7 @@
             'echo twosum([1, 2, 13, 4, 5], 17)\n';
     }
 </script>
-<script async type="text/javascript" src="YASL.js"></script>
+<script async type="text/javascript" src="yasl.js"></script>
 <script>
 </script>
 </body>
