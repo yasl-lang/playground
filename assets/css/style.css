@@ -10,8 +10,8 @@
 body {
     --font: 'Poppins';
     font-family: var(--font);
-    background-color: var(--light-yellow);
-    color: var(--independance);
+    background-color: var(--rosewood);
+    color: var(--yellow);
     position:relative;
     text-align:center;
     margin:0px;
@@ -41,12 +41,10 @@ div {
 h1 {
     padding: 1em 0px;
     width: 100%;
-    /* background: var(--yellow); */
-    color: var(--rosewood);
+    color: var(--yellow);
     position: relative;
     font-size: 40px;
     margin: 0px;
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.5em;
 }
 
@@ -55,9 +53,9 @@ footer {
 }
 
 button {
-    font-family: 'Ubuntu Mono', monospace;
-    background-color: var(--rosewood);
-    color: white;
+    --font: 'Poppins';
+    background-color: var(--independance);
+    color: var(--yellow);
     border-radius: 5px;
     margin: 0px 10px;
     border: none;
@@ -73,7 +71,7 @@ button:active {
 }
 
 button:hover {
-    color: var(--yellow);
+    color: var(--light-yellow);
     transform: translate(0px, -2px);
 }
 
@@ -83,6 +81,7 @@ textarea {
     color: var(--yellow);
     border-radius: 5px;
     border: 0.35em solid var(--independance);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
     font-size: 14px;
     margin: 5px 10px 25px;
 }
