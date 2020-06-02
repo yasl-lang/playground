@@ -1,10 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+    --yellow: #D8B203;
+    --light-yellow: #FFFCBB;
+    --rosewood: #550C18;
+    --independance: #3A405A;
+}
 
 body {
-    --font: 'Montserrat';
+    --font: 'Poppins';
     font-family: var(--font);
-    background-color: #fafafa;
-    color: #333;
+    background-color: var(--light-yellow);
+    color: var(--independance);
     position:relative;
     text-align:center;
     margin:0px;
@@ -32,27 +39,32 @@ div {
 }
 
 h1 {
-  padding:1em 0px;
-  width:100%;
-  background:#ffdd00;
-  position:relative;
-  font-size:40px;
-  margin:0px;
-  text-shadow:3px 3px 3px rgba(0,0,0,0.1);
-  margin-bottom:0.5em;
+    padding: 1em 0px;
+    width: 100%;
+    /* background: var(--yellow); */
+    color: var(--rosewood);
+    position: relative;
+    font-size: 40px;
+    margin: 0px;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5em;
+}
+
+footer {
+    font-size: 0.85em;
 }
 
 button {
     font-family: 'Ubuntu Mono', monospace;
-    background-color: #333;
-    color: #ffdd00;
+    background-color: var(--rosewood);
+    color: white;
     border-radius: 5px;
-    margin:0px 5px;
-    border:none;
-    padding:5px 10px;
+    margin: 0px 10px;
+    border: none;
+    padding: 10px 15px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
-    font-size:15px;
-    transition:all 0.5s ease-in-out;
+    font-size: 15px;
+    transition: all 0.5s ease-in-out;
 }
 
 button:active {
@@ -61,18 +73,18 @@ button:active {
 }
 
 button:hover {
-    color: #fff;
-    transform:translate(0px, -2px);
+    color: var(--yellow);
+    transform: translate(0px, -2px);
 }
 
 textarea {
     font-family: 'Ubuntu Mono', monospace;
-    background-color: #4f4e51;  
-    color: #ffdd00;
+    background-color: var(--independance);
+    color: var(--yellow);
     border-radius: 5px;
-    border: 0.35em solid #4f4e51;
-    font-size:14px;
-    margin:5px;
+    border: 0.35em solid var(--independance);
+    font-size: 14px;
+    margin: 5px 10px 25px;
 }
 
 code {
