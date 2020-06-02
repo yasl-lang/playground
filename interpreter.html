@@ -15,13 +15,14 @@
         <button onclick="YASL_fact();" type="button">factorial</button>
         <button onclick="YASL_twosum();" type="button">two sum</button>
     </div>
-    <div class="emscripten" id="status">Downloading...</div>
+
 </div>
 <div>
     <textarea style="resize:none;" cols="80" rows="30" id="input" placeholder="Please enter some YASL..."></textarea>
     <textarea style="resize:none;" cols="80" rows="30" id="output" readonly ></textarea>
     <br/>
-    <button onclick="YASL();" type="button">Run it!</button>
+    <div class="emscripten" id="status"><p>Downloading...</p></div>
+    <!-- <button onclick="YASL();" type="button">Run it!</button> -->
 </div>
 <script type='text/javascript'>
     var statusElement = document.getElementById('status');
@@ -61,7 +62,15 @@
             if (m) {
                 text = m[1];
             }
-            statusElement.innerHTML = text || "Ready";
+            if (text) {
+                statusElement.innerHTML = text;
+            } else {
+                var button = document.createElement("button");
+                button.innerHTML = "Run it!";
+                button.onclick = YASL;
+                statusElement.replaceChild(button, statusElement.childNodes[0]);
+            }
+            // statusElement.innerHTML = text || "Ready";
         },
         totalDependencies: 0,
         monitorRunDependencies: function(left) {
