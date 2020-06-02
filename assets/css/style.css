@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
 :root {
-    --yellow: #D8B203;
-    --light-yellow: #FFFCBB;
     --rosewood: #550C18;
     --independance: #3A405A;
 }
@@ -10,8 +8,8 @@
 body {
     --font: 'Poppins';
     font-family: var(--font);
-    background-color: var(--rosewood);
-    color: var(--yellow);
+    background-color: white;
+    color: var(--rosewood);
     position:relative;
     text-align:center;
     margin:0px;
@@ -35,7 +33,6 @@ div {
 h1 {
     padding: 1em 0px;
     width: 100%;
-    color: var(--yellow);
     position: relative;
     font-size: 40px;
     margin: 0px;
@@ -48,11 +45,11 @@ footer {
 
 button {
     --font: 'Poppins';
-    background-color: var(--independance);
-    color: var(--yellow);
+    background-color: white;
+    color: var(--rosewood);
     border-radius: 5px;
     margin: 0px 10px;
-    border: none;
+    border: 0.15em solid var(--rosewood);
     padding: 10px 15px;
     box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
     font-size: 15px;
@@ -65,16 +62,17 @@ button:active {
 }
 
 button:hover {
-    color: var(--light-yellow);
+    color: var(--rosewood);
     transform: translate(0px, -2px);
 }
 
 textarea {
     font-family: 'Ubuntu Mono', monospace;
-    background-color: var(--independance);
-    color: var(--yellow);
+    background-color: white;
+    color: var(--rosewood);
     border-radius: 5px;
-    border: 0.35em solid var(--independance);
+    padding: 0.15em;
+    border: 0.2em solid var(--rosewood);
     box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
     font-size: 14px;
     margin: -5px 10px 15px;
