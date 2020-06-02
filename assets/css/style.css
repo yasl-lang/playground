@@ -10,18 +10,16 @@ body {
     font-family: var(--font);
     background-color: white;
     color: var(--rosewood);
-    position:relative;
-    text-align:center;
-    margin:0px;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    align-content:center;
-    justify-items:center;
-    justify-content:center;
-    width:100vw;
-    height:100vh;
-    line-height:100%;
+    text-align: center;
+    margin: 0px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    line-height: 100%;
 }
 
 div {
@@ -33,7 +31,6 @@ div {
 h1 {
     padding: 1em 0px;
     width: 100%;
-    position: relative;
     font-size: 40px;
     margin: 0px;
     margin-bottom: 0.5em;
