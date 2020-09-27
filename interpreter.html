@@ -93,6 +93,9 @@
         var text = document.getElementById('input').value;
         console.log(text);
         var S = Module.ccall("YASL_newstate_bb", "number", ["string", "number"], [text, text.length]);
+        Module.ccall("YASL_decllib_collections", "number", ["number"], [S]);
+        Module.ccall("YASL_decllib_math", "number", ["number"], [S]);
+        Module.ccall("YASL_decllib_mt", "number", ["number"], [S]);        
         Module.ccall("YASL_setprintout_tostr", null, ["number"], [S]);
         Module.ccall("YASL_setprinterr_tostr", null, ["number"], [S]);
         var status = Module.ccall("YASL_execute", "number", ["number"], [S]);
