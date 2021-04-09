@@ -104,7 +104,7 @@
         } else {
             Module.ccall("YASL_loadprintout", null, ["number"], [S])
         }
-        var output = Module.ccall("YASL_top_popcstring", 'string', ["number"], [S]);
+        var output = Module.ccall("YASL_popcstr", 'string', ["number"], [S]);
         document.getElementById('output').value = output;
     }
     function YASL_helloworld() {
